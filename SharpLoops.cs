@@ -4,25 +4,22 @@ namespace SharpLoops
 	
 	public class Program
 	{
+		
+		
 		static string GetName()
 		{
 			Console.WriteLine("Please enter your name and press the 'Enter' key.");
 			string userName = Console.ReadLine();
 			return userName;
 		}
-
-
-		public static void Main(string[] args)
+		
+		
+		static void PrintName(string name, bool validName)
 		{
-			//Set boolean ValidName to false
-			bool validName = false;
-			//While no valid name is entered, loop through user prompt
+						//While no valid name is entered, loop through user prompt
 			while(validName == false)	
 			{
-				//Call GetName() method to prompt user for name
-				string name = GetName();
-
-				//If 'name' is empty, inform user and call GetName() to try again
+			    //If 'name' is empty, inform user and call GetName() to try again
 				if (String.IsNullOrEmpty(name))
 				{
 					Console.WriteLine("Error, Please enter a non-blank name");
@@ -35,8 +32,19 @@ namespace SharpLoops
 					Console.WriteLine("Greetings, " + name);
 					validName=true;
 				}
+		     }
+		  }
+		
+		
+		public static void Main(string[] args)
+			{
+				//Set boolean ValidName to false
+				bool validity = false;
+
+				//Call GetName() method to prompt user for name
+				string username = GetName();
+				PrintName(username, validity);
 			}
 
 		}
     }
-}
