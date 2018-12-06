@@ -2,49 +2,47 @@ using System;
 namespace SharpLoops
 {	
 	
-	public class Program
+    public class Program
+    {
+		
+		
+        static string GetName()
 	{
-		
-		
-		static string GetName()
+	    Console.WriteLine("Please enter your name and press the 'Enter' key.");
+	    string userName = Console.ReadLine();
+	    return userName;
+	}
+			
+	static void PrintName(string name, bool validName)
+	{
+           //While no valid name is entered, loop through user prompt
+	    while(validName == false)	
+	    {
+	        //If 'name' is empty, inform user and call GetName() to try again
+		if (String.IsNullOrEmpty(name))
 		{
-			Console.WriteLine("Please enter your name and press the 'Enter' key.");
-			string userName = Console.ReadLine();
-			return userName;
+		    Console.WriteLine("Error, Please enter a non-blank name");
+		    name = GetName();
 		}
-		
-		
-		static void PrintName(string name, bool validName)
+
+		//Else if name is not empty, print Greetings + 'name' to console
+		else
 		{
-						//While no valid name is entered, loop through user prompt
-			while(validName == false)	
-			{
-			    //If 'name' is empty, inform user and call GetName() to try again
-				if (String.IsNullOrEmpty(name))
-				{
-					Console.WriteLine("Error, Please enter a non-blank name");
-					name = GetName();
-				}
-
-				//Else if name is not empty, print Greetings + 'name' to console
-				else
-				{
-					Console.WriteLine("Greetings, " + name);
-					validName=true;
-				}
-		     }
-		  }
-		
-		
-		public static void Main(string[] args)
-			{
-				//Set boolean ValidName to false
-				bool validity = false;
-
-				//Call GetName() method to prompt user for name
-				string username = GetName();
-				PrintName(username, validity);
-			}
-
+	    	    Console.WriteLine("Greetings, " + name);
+		    validName=true;
 		}
+	     }
+          }
+		
+		
+	public static void Main(string[] args)
+	{
+	    //Set boolean ValidName to false
+	    bool validity = false;
+	    //Call GetName() method to prompt user for name
+	    string username = GetName();
+	    PrintName(username, validity);
+	}
+
     }
+}   
