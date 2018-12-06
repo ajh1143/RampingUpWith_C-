@@ -25,7 +25,7 @@ namespace SharpLoops
 				//If 'name' is empty, inform user and call GetName() to try again
 				if (String.IsNullOrEmpty(name))
 				{
-					Console.WriteLine("Error, Please enter a none-blank name");
+					Console.WriteLine("Error, Please enter a non-blank name");
 					name = GetName();
 				}
 
