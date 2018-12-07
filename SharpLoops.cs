@@ -17,7 +17,6 @@ namespace SharpLoops
 	static void ForEachLetter(string user_name)
 	{
 	    int counter = 0;
-	    string hw = "Hello, World!";
 	    Console.WriteLine("\nInitiating Foreach Loop:");
             System.Threading.Thread.Sleep(200);
 	    
