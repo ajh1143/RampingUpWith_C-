@@ -1,7 +1,9 @@
 # RampingUpWith_C\#
 Improving my C# skills
 
-## Hello, World!
+## Hello, World!    
+Print Hello, World
+Collect user input, convert to uppercase, and print `Hello, USERINPUT`. 
 ```C#
 using System;
 namespace HelloCSharp
@@ -15,33 +17,28 @@ namespace HelloCSharp
             //Read input from console, store as String 'x'
 	    String x = Console.ReadLine();
 	    //Convert x to uppercase and print to console
-	    Console.WriteLine(x.ToUpper());
+	    Console.WriteLine("Hello, {0}", x.ToUpper());
 	}
     }
 }
 ```
 
 ## Loops
-```C#
-using System;
-namespace SharpLoops
-{	
-	
-    public class Program
-    {
-		
-```
 ### Get Name Loop
+Collect user input, a desired name. 
 ```C#
-        static string GetName()
-	{
-	    Console.WriteLine("Please enter your name and press the 'Enter' key.");
-	    string userName = Console.ReadLine();
-	    return userName;
-	}
+static string GetName()
+{
+    Console.WriteLine("Please enter your name and press the 'Enter' key.");
+    string userName = Console.ReadLine();
+    return userName;
+}
 	
 ```
 ### ForEachLetter Loop
+For each letter in the user name, print position and letter.
+Set Thread.Sleep to slow generation of output between letters.
+Calculate total letters in user's name.
 ```C#
 static void ForEachLetter(string user_name)
 {
@@ -59,6 +56,7 @@ static void ForEachLetter(string user_name)
  }    
 ```
 ### WhileName Loop
+Control user input loop, check for valid entry, prompt user to re-enter name if invalid. 
 ```C#
 	    
 static void WhileName(string name, bool validName)
@@ -97,6 +95,7 @@ public static void Main(string[] args)
 
 ## Recursion
 ### User Input
+Collect user input, do-while loop to prompt user for a valid integer input if not given. 
 ```C#
 static int UserInput()
     /*
@@ -118,6 +117,7 @@ static int UserInput()
 }
 ```
 ### Simple Recursion
+Given user-defined integer, recursively print current value and deincrement until 0.
 ```C#
 
 static void SimpleRecurse(int num)
