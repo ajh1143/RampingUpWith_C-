@@ -1,5 +1,4 @@
-# RampingUpWith_C\#
-Learning C#
+# Learning C# Through Practice
 
 ## Hello, World!    
 Print Hello, World
